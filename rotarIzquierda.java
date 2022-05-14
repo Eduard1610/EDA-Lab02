@@ -10,8 +10,8 @@ public class rotarIzquierda {
 
 	System.out.print("Ingrese el número de rotaciones a la izquierda: ");
 	numRotaciones = sc.nextInt();
-	int[] arregloInvertido = rotarIzquierda(a);
-	imprimirArray(arregloInvertido);
+	int[] arregloRotado = rotarIzquierda(a);
+	imprimirArray(arregloRotado);
 
     }
 
