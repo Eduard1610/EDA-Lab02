@@ -40,4 +40,14 @@ public class List<T>
 			nodoActual.set(newNode);//Cuando llega al nodo final asigna a nodoActual como el siguiente nodo vinculado
 		}
 	}
+
+	public String toString() {
+		String listado = "";
+		Node<T> nodoActual = root; //Asigna a nodoActual el nodo cabecera (root)
+		while(nodoActual != null) {//bucle que recorre la lista
+			listado += nodoActual.toString() + "\n";//concatena el nodoActual como cadena al string listado
+			nodoActual = nodoActual.getNext();//pasa al siguiente nodo enlazado
+		}
+		return listado;
+	}
 }
