@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Programa {
     public static Scanner scan = new Scanner(System.in);
-    public static List<Persona> personas = new ArrayList <Persona> ();
+    public static List<Persona> personas = new ArrayList<Persona>();
 
     public static void main(String[] args) {
         int opcion = 0;
@@ -41,10 +41,10 @@ public class Programa {
                     System.out.print(personas);
                     break;
                 case 4:
-                    System.out.println("Es: "+personas.contains(registro()));
+                    System.out.println("Es: " + personas.contains(registro()));
                     break;
                 case 5:
-               // System.out.println("Es: "+personas.equals(registro()));
+                    // System.out.println("Es: "+personas.equals(registro()));
                     break;
                 case 6:
                     System.out.println("Introduce la posicion");
@@ -52,16 +52,18 @@ public class Programa {
                     System.out.println(personas.get(posicion2));
                     break;
                 case 7:
-                System.out.println("Posicion: "+personas.indexOf(registro()));
+                    System.out.println("Posicion: " + personas.indexOf(registro()));
                     break;
                 case 8:
-                
+                    System.out.println("La lista esta vacia: " + personas.isEmpty());
                     break;
                 case 9:
-
+                    System.out.println("Posicion: " + personas.lastIndexOf(registro()));
                     break;
                 case 10:
-
+                    System.out.println("Introduce la posicion de la persona a eliminar");
+                    int posicion3 = scan.nextInt();
+                    System.out.println(personas.remove(posicion3));
                     break;
                 case 11:
 
@@ -105,18 +107,18 @@ public class Programa {
         }
 
     }
-    
-public static Persona registro(){
-                    System.out.println("Introduce tu nombre");
-                    String nombre = scan.next();
-                    System.out.println("Introduce tu edad");
-                    int edad = scan.nextInt();
-                    System.out.println("Introduce tu género");
-                    String genero = scan.next();
-                    System.out.println("Introduce tu nota: ");
-                    double nota = scan.nextInt();
-                    Persona persona = new Persona(nombre, edad, genero, nota);
-                    return persona;
-}
+
+    public static Persona registro() {
+        System.out.println("Introduce tu nombre");
+        String nombre = scan.next();
+        System.out.println("Introduce tu edad");
+        int edad = scan.nextInt();
+        System.out.println("Introduce tu género");
+        String genero = scan.next();
+        System.out.println("Introduce tu nota: ");
+        double nota = scan.nextInt();
+        Persona persona = new Persona(nombre, edad, genero, nota);
+        return persona;
+    }
 
 }
