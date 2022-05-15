@@ -10,12 +10,16 @@ public class Node<T> {
         return t;
     }
 
-    public T nextNode(){
+    public T get(int i){
+        return list.get(i);
+    }
 
+    public T nextNode(){
+        
     }
     
     public T root(){
-
+        return list.get(0);
     }
 
     public String toString(){
